@@ -11,7 +11,7 @@ if ($usu1 == "" || $pass1 == "") {
 } else {
     $db = new Database();
     $con = $db->conectar();
-    $sql = $con->prepare("SELECT * FROM Prueba where nombre=? AND valor=?");
+    $sql = $con->prepare("SELECT * FROM Registro where nombre=? AND valor=?");
     $sql->bindParam(1, $usu1);
     $sql->bindParam(2, $pass1);
     $sql->execute();

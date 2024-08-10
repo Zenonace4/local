@@ -11,7 +11,7 @@ if ($usu1 == "" || $pass1 == "") {
 } else {
     $db = new Database();
     $con = $db->conectar();
-    $sql = $con->prepare("SELECT * FROM Registro where usuarioe=? AND contra=?");
+    $sql = $con->prepare("SELECT * FROM Registro where usuario=? AND contra=?");
     $sql->bindParam(1, $usu1);
     $sql->bindParam(2, $pass1);
     $sql->execute();
